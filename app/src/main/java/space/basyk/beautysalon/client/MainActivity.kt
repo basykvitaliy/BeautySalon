@@ -3,6 +3,7 @@ package space.basyk.beautysalon.client
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.github.terrakok.cicerone.Cicerone
+import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.AppNavigator
 import space.basyk.beautysalon.R
 import space.basyk.beautysalon.cicerone.Screens
@@ -10,7 +11,7 @@ import space.basyk.beautysalon.cicerone.Screens
 class MainActivity : AppCompatActivity() {
 
     private val cicerone = Cicerone.create()
-    val router get() = cicerone.router
+    val router: Router by lazy { cicerone.router }
     val navigatorHolder get() = cicerone.getNavigatorHolder()
 
     private val navigator = AppNavigator(this, R.id.main_container)

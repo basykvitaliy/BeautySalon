@@ -1,4 +1,4 @@
-package space.basyk.beautysalon.client.models
+package space.basyk.beautysalon.models
 
 import android.widget.ImageView
 

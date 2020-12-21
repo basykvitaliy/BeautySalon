@@ -46,6 +46,12 @@ dependencies {
 
     implementation"com.github.terrakok:cicerone:6.6"
 
+    // Koin for Kotlin apps
+    implementation "org.koin:koin-core:2.1.0"
+    // Testing
+    testImplementation "org.koin:koin-test:2.1.0"
+    implementation "org.koin:koin-android-viewmodel:2.1.0"
+
 
 
 }
