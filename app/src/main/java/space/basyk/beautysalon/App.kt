@@ -5,6 +5,7 @@ import com.github.terrakok.cicerone.Cicerone
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
+import org.koin.core.logger.Level
 import space.basyk.beautysalon.di.koinModule
 
 class App:Application() {
@@ -18,7 +19,7 @@ class App:Application() {
         super.onCreate()
         INSTANCE = this
         startKoin {
-            androidLogger()
+            androidLogger(Level.NONE)
             androidContext(this@App)
             modules(koinModule)
         }

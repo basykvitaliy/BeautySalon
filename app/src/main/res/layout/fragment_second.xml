@@ -9,11 +9,13 @@
     android:orientation="vertical">
 
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/rl_client"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/large"
@@ -37,6 +39,7 @@
         android:layout_height="4dp"
         android:backgroundTint="@color/colorWhite"/>
     <RelativeLayout
+        android:id="@+id/rl_salons"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -54,13 +57,11 @@
             android:text="Предоставить услугу"
             android:textColor="@color/colorWhite"
             android:textSize="36sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:shadowColor="@color/colorBlack"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="15"/>
     </RelativeLayout>
-
-
-
-
-
-
 
 </LinearLayout>

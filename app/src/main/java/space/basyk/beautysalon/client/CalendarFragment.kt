@@ -6,19 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_calendar.*
+import kotlinx.android.synthetic.main.fragment_reset_password.*
 import kotlinx.android.synthetic.main.fragment_sign_in.*
+import space.basyk.beautysalon.BaseFragment
 import space.basyk.beautysalon.R
 
 
-class CalendarFragment : Fragment() {
+class CalendarFragment : BaseFragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
-            textView.text = "$dayOfMonth.${month + 1}.$year"
-        }
 
     }
 

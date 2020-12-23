@@ -6,4 +6,4 @@ val useCaseModule = module {  }
 val repositoryModule = module {  }
 val viewModelModule = module {  }
 
-val koinModule = useCaseModule + repositoryModule + viewModelModule
+val koinModule = useCaseModule+repositoryModule+viewModelModule

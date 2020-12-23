@@ -5,9 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import space.basyk.beautysalon.BaseFragment
 import space.basyk.beautysalon.R
 
-class CityesFragment : Fragment() {
+class CityesFragment : BaseFragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
