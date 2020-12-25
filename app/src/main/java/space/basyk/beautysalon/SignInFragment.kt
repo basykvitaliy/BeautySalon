@@ -9,22 +9,15 @@ import androidx.databinding.DataBindingUtil
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 import space.basyk.beautysalon.cicerone.Screens
 import space.basyk.beautysalon.databinding.FragmentSignInBinding
-import space.basyk.beautysalon.databinding.FragmentSplashScreenBinding
 
 
 class SignInFragment : BaseFragment() {
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentSignInBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_sign_in, container, false)
+        val binding:FragmentSignInBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_sign_in, container, false)
         return binding.root
     }
 

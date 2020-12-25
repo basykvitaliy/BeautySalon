@@ -16,10 +16,6 @@ import space.basyk.beautysalon.databinding.FragmentSplashScreenBinding
 
 class SplashScreenFragment : BaseFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
