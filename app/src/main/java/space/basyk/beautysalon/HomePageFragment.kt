@@ -1,15 +1,12 @@
-package space.basyk.beautysalon.client
+package space.basyk.beautysalon
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import space.basyk.beautysalon.BaseFragment
-import space.basyk.beautysalon.R
 
 
-class ChoiseMasterFragment : BaseFragment() {
+class HomePageFragment : BaseFragment() {
 
 
     override fun onCreateView(
@@ -17,7 +14,7 @@ class ChoiseMasterFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_choise_master, container, false)
+        return inflater.inflate(R.layout.fragment_home_page, container, false)
     }
 
 

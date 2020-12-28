@@ -2,10 +2,7 @@ package space.basyk.beautysalon.cicerone
 
 import com.github.terrakok.cicerone.androidx.AppScreen
 import com.github.terrakok.cicerone.androidx.FragmentScreen
-import space.basyk.beautysalon.ResetPasswordFragment
-import space.basyk.beautysalon.SecondFragment
-import space.basyk.beautysalon.SignInFragment
-import space.basyk.beautysalon.SplashScreenFragment
+import space.basyk.beautysalon.*
 import space.basyk.beautysalon.client.*
 
 object Screens{
@@ -21,5 +18,7 @@ object Screens{
     fun Order() = FragmentScreen{OrderFragment()}
     fun Service() = FragmentScreen{ServiceFragment()}
     fun RestPass() = FragmentScreen{ResetPasswordFragment()}
+    fun HomePage() = FragmentScreen{HomePageFragment()}
+    fun ProfileClient() = FragmentScreen{ProfileClientFragment()}
 
 }

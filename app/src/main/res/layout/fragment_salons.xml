@@ -48,6 +48,7 @@
         android:padding="8dp"
         android:layout_below="@+id/rv_salons_hor"
         android:orientation="vertical"
+        tools:listitem="@layout/salon_item"
         />
 
 

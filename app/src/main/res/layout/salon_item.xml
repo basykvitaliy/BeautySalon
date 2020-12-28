@@ -1,84 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="5dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+        <variable
+            name="salon"
+            type="space.basyk.beautysalon.models.SalonModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_margin="2dp">
 
-        <ImageView
-            android:id="@+id/photo_salon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_launcher_background"
-            android:padding="5dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/image_phone_call"
-            app:layout_constraintStart_toEndOf="@+id/photo_salon"
-            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/photo_salon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@{salon.photo}"
+                tools:srcCompat="@drawable/ic_launcher_background"
+                android:padding="5dp" />
 
-            <TextView
-                android:id="@+id/title_salon"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="titleSalon"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/image_phone_call"
                 app:layout_constraintStart_toEndOf="@+id/photo_salon"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/phone_salon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="+38265996325"
-                android:textColor="@color/colorBlack"
-                android:textStyle="italic"
-                app:layout_constraintStart_toEndOf="@+id/photo_salon"
-                app:layout_constraintTop_toBottomOf="@+id/title_salon" />
+                <TextView
+                    android:id="@+id/title_salon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{salon.titleSalon}"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Title"
+                    app:layout_constraintStart_toEndOf="@+id/photo_salon"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/adress_salon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="г.Киев, ул Строителей, 32"
-                app:layout_constraintStart_toEndOf="@+id/photo_salon"
-                app:layout_constraintTop_toBottomOf="@+id/phone_salon" />
+                <TextView
+                    android:id="@+id/schedule_salon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{salon.scheduleSalon}"
+                    tools:text="9.00-18.00"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toEndOf="@+id/photo_salon"
+                    app:layout_constraintTop_toBottomOf="@+id/title_salon" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/adress_salon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{salon.adressSalon}"
+                    tools:text="г.Киев, ул Строителей, 32"
+                    app:layout_constraintStart_toEndOf="@+id/photo_salon"
+                    app:layout_constraintTop_toBottomOf="@+id/phone_salon" />
 
-        <ImageView
-            android:id="@+id/image_phone_call"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_local_phone_24"
-            android:layout_margin="16dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image_phone_call"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_local_phone_24"
+                android:layout_margin="16dp" />
 
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+</layout>

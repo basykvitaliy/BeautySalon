@@ -8,9 +8,6 @@ import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.AppNavigator
 import space.basyk.beautysalon.R
 import space.basyk.beautysalon.cicerone.Screens
-import space.basyk.beautysalon.databinding.ActivityMainBinding
-
-
 class MainActivity : AppCompatActivity() {
 
     private val cicerone = Cicerone.create()
@@ -21,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        setContentView(R.layout.activity_main)
         router.navigateTo(Screens.Splash())
     }
 

@@ -9,15 +9,14 @@ import space.basyk.beautysalon.BaseFragment
 import space.basyk.beautysalon.R
 
 
-class ChoiseMasterFragment : BaseFragment() {
-
+class ProfileClientFragment : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_choise_master, container, false)
+        return inflater.inflate(R.layout.fragment_profile_client, container, false)
     }
 
 
