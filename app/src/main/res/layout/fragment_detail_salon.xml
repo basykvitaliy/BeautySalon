@@ -1,109 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".client.DetailSalonFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/img_detail_salon"
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        tools:context=".screens.detailsalon.DetailSalonFragment">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        android:padding="8dp">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="2"
+        <include
+            layout="@layout/fragment_app_bar"
+            android:id="@+id/app_bar"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="4dp">
+            android:layout_width="match_parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar"
+            app:srcCompat="@drawable/salon" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            android:padding="8dp">
+
 
             <TextView
                 android:id="@+id/name_salon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:text="Name"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorText"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginTop="8dp"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_salon"
+                app:srcCompat="@drawable/ic_baseline_access_time_24" />
 
             <TextView
                 android:id="@+id/phone_salon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+380965532145"
+                android:layout_marginStart="8dp"
+                android:text="9.00 - 18.00"
                 android:textSize="14sp"
                 android:textStyle="italic"
-                android:layout_marginTop="8dp"/>
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
             <TextView
                 android:id="@+id/adress_salon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:text="г.Киев, ул Строителей, 32"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_salon" />
 
-        </LinearLayout>
 
-        <RatingBar
-            android:id="@+id/ratingBar"
-            style="@style/Widget.AppCompat.RatingBar.Small"
-            android:layout_width="0dp"
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_marginEnd="189dp"
+                android:layout_weight="1"
+                android:isIndicator="false"
+                android:max="5"
+                android:numStars="5"
+                android:progress="5"
+                android:progressTint="@color/colorPrimaryDark"
+                android:rating="3"
+                android:stepSize="0.5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/materialButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:isIndicator="false"
-            android:max="5"
-            android:numStars="5"
-            android:progress="5"
-            android:progressTint="@color/colorPrimaryDark"
-            android:rating="3"
-            android:stepSize="0.5" />
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/btn_bg"
+            android:text="Оформить заказ"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:text="Оформить заказ"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/materialButton"
+            app:layout_constraintStart_toEndOf="@id/materialButton"
+            app:layout_constraintTop_toTopOf="@+id/materialButton"
+            app:srcCompat="@drawable/ic_baseline_local_phone_24" />
 
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

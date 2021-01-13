@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SplashScreenFragment">
+        tools:context=".screens.splashscreen.SplashScreenFragment">
 
         <ImageView
             android:id="@+id/img_splash"
@@ -22,7 +22,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/splash" />
+            app:srcCompat="@drawable/splashimg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="148dp"
+            android:fontFamily="@font/archivo_black"
+            android:text="Beauty\nCity"
+            android:textColor="@color/colorTextStart"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ProgressBar
             android:id="@+id/progressBar"

@@ -10,16 +10,9 @@
             type="space.basyk.beautysalon.models.ServicesModel" />
     </data>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        android:layout_margin="2dp">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/title_service"
@@ -27,13 +20,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:text="@{services.title}"
-                tools:text="Services"
-                android:textColor="@color/colorBlack"
-                android:textSize="24sp"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Services" />
 
             <TextView
                 android:id="@+id/price_service"
@@ -41,13 +34,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:text="@{services.price}"
-                tools:text="135"
-                android:textColor="@color/colorBlack"
+                android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/image_phone_call"
                 app:layout_constraintStart_toEndOf="@+id/title_service"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="135 grn" />
 
 
             <ImageView
@@ -63,5 +56,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
 </layout>

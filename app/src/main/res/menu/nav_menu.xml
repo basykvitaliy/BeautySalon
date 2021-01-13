@@ -2,21 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/ic_sale"
-        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:icon="@drawable/ic_baseline_loyalty_24"
         android:title="Sale" />
+    <item
+        android:id="@+id/ic_myOrders"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="Home" />
     <item
         android:id="@+id/ic_favorite"
         android:icon="@drawable/ic_baseline_favorite_24"
         android:title="Fav" />
     <item
-        android:id="@+id/ic_home"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home" />
-
-
-
-    <item
         android:id="@+id/ic_profile"
-        android:icon="@drawable/ic_baseline_person_24"
+        android:icon="@drawable/ic_baseline_perm_identity_24"
         android:title="Prof" />
 </menu>

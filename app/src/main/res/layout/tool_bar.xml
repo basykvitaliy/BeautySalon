@@ -27,7 +27,7 @@
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:text="Выберите салон"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/colorText"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/btn_share"
         app:layout_constraintStart_toEndOf="@+id/btn_back"

@@ -1,9 +1,7 @@
 package space.basyk.beautysalon
 
-import android.app.Activity
 import androidx.fragment.app.Fragment
 import com.github.terrakok.cicerone.Router
-import space.basyk.beautysalon.client.MainActivity
 
 abstract class BaseFragment : Fragment {
     constructor():super()

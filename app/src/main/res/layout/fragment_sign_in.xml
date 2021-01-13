@@ -11,7 +11,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".SignInFragment">
+            tools:context=".screens.signin.SignInFragment">
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline"
@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Зарегистрироваться"
-                    android:textColor="@color/colorBlack"
+                    android:textColor="@color/colorText"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -117,16 +117,5 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_forgot_pass" />
 
-                <!--        <com.facebook.login.widget.LoginButton-->
-                <!--            android:id="@+id/login_button"-->
-                <!--            android:layout_width="match_parent"-->
-                <!--            android:layout_height="wrap_content"-->
-                <!--            android:layout_gravity="center_horizontal"-->
-                <!--            android:layout_marginStart="32dp"-->
-                <!--            android:layout_marginTop="32dp"-->
-                <!--            android:layout_marginEnd="32dp"-->
-                <!--            app:layout_constraintEnd_toEndOf="parent"-->
-                <!--            app:layout_constraintStart_toStartOf="parent"-->
-                <!--            app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />-->
         </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
