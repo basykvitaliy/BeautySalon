@@ -4,31 +4,38 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import kotlinx.android.synthetic.main.fragment_second.*
 import space.basyk.beautysalon.BaseFragment
 import space.basyk.beautysalon.R
-import space.basyk.beautysalon.cicerone.Screens
+import space.basyk.beautysalon.Utils.START_ACTIVITY
 import space.basyk.beautysalon.databinding.FragmentSecondBinding
 
 
 class SecondFragment : BaseFragment() {
 
+    private var binding: FragmentSecondBinding ?= null
+    private val mBinding get() = binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val binding: FragmentSecondBinding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_second, container, false)
-        return binding.root
+        binding = FragmentSecondBinding.inflate(layoutInflater, container, false)
+        return mBinding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        rl_client.setOnClickListener {
-            router.navigateTo(Screens.SignIn())
+    override fun onStart() {
+        super.onStart()
+        init()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
+    private fun init() {
+        mBinding.btnClient.setOnClickListener {
+            START_ACTIVITY.navController.navigate(R.id.action_secondFragment_to_signInFragment)
         }
     }
 

@@ -2,32 +2,33 @@ package space.basyk.beautysalon
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
-import com.github.terrakok.cicerone.Cicerone
-import com.github.terrakok.cicerone.Router
-import com.github.terrakok.cicerone.androidx.AppNavigator
-import space.basyk.beautysalon.R
-import space.basyk.beautysalon.cicerone.Screens
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import space.basyk.beautysalon.Utils.APP_ACTIVITY
+import space.basyk.beautysalon.databinding.ActivityMainBinding
+
 class MainActivity : AppCompatActivity() {
 
-    private val cicerone = Cicerone.create()
-    val router: Router by lazy { cicerone.router }
-    val navigatorHolder get() = cicerone.getNavigatorHolder()
-
-    private val navigator = AppNavigator(this, R.id.main_container)
+    private var binding: ActivityMainBinding ?= null
+    private val mBinding get() = binding!!
+    lateinit var navController: NavController
+    lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        router.navigateTo(Screens.Splash())
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
+        APP_ACTIVITY = this
+        navController = Navigation.findNavController(this, R.id.fragment)
+        bottomNavigationView = mBinding.bottomNavigationView
+        bottomNavigationView.setupWithNavController(navController)
     }
 
-    override fun onResumeFragments() {
-        super.onResumeFragments()
-        navigatorHolder.setNavigator(navigator)}
-
-    override fun onPause() {
-        navigatorHolder.removeNavigator()
-        super.onPause()
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
     }
+
 }

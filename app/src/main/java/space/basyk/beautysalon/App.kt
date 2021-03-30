@@ -1,7 +1,6 @@
 package space.basyk.beautysalon
 
 import android.app.Application
-import com.github.terrakok.cicerone.Cicerone
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -13,9 +12,6 @@ import space.basyk.beautysalon.services.ApiServices
 
 class App:Application() {
 
-    private val cicerone = Cicerone.create()
-    val router get() = cicerone.router
-    val navigatorHolder get() = cicerone.getNavigatorHolder()
 
     lateinit var retrofit: Retrofit
     val BASE_URL: String = ""

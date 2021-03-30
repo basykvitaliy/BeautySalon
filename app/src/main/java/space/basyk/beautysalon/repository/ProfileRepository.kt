@@ -1,7 +1,7 @@
 package space.basyk.beautysalon.repository
 
-import space.basyk.beautysalon.room.ProfileDatabase
-import space.basyk.beautysalon.room.entity.ProfileItem
+import space.basyk.beautysalon.database.room.ProfileDatabase
+import space.basyk.beautysalon.database.room.entity.ProfileItem
 
 class ProfileRepository(private val db: ProfileDatabase) {
     suspend fun insert(item: ProfileItem) = db.getProfileDao().insert(item)

@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ashokvarma.android:bottom-navigation-bar:1.3.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ebb492286131c82b34411df8972c2f1/jetified-bottom-navigation-bar-1.3.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5f8c32c2c3af479de95482136f14c67/jetified-bottom-navigation-bar-1.3.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6611af560332a12e1c6416c5cfa23844/jetified-bottom-navigation-bar-1.3.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ebb492286131c82b34411df8972c2f1/jetified-bottom-navigation-bar-1.3.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ebb492286131c82b34411df8972c2f1/jetified-bottom-navigation-bar-1.3.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ebb492286131c82b34411df8972c2f1/jetified-bottom-navigation-bar-1.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5f8c32c2c3af479de95482136f14c67/jetified-bottom-navigation-bar-1.3.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5f8c32c2c3af479de95482136f14c67/jetified-bottom-navigation-bar-1.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5f8c32c2c3af479de95482136f14c67/jetified-bottom-navigation-bar-1.3.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6611af560332a12e1c6416c5cfa23844/jetified-bottom-navigation-bar-1.3.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6611af560332a12e1c6416c5cfa23844/jetified-bottom-navigation-bar-1.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6611af560332a12e1c6416c5cfa23844/jetified-bottom-navigation-bar-1.3.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ashokvarma.android/bottom-navigation-bar/1.3.0/b01bd74543830c5a290993270e7e487c3e61da43/bottom-navigation-bar-1.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ashokvarma.android/bottom-navigation-bar/1.3.0/fa13db111e6c0699170e8acc82da2ac849b1cbd3/bottom-navigation-bar-1.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -13,10 +13,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-    <include
-        android:id="@+id/include_bottom"
-        layout="@layout/fragment_bottom_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
